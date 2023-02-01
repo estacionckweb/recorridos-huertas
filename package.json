@@ -10,16 +10,17 @@
     "tailwindcss": "^0.7.2"
   },
   "dependencies": {
-    "@material-ui/core": "^3.6.2",
-    "@material-ui/icons": "^3.0.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/base": "^5.0.0-alpha.116",
+    "@mui/material": "^5.11.7",
     "@turf/turf": "^5.1.6",
-    "font-awesome": "^4.7.0",
     "lunr": "^2.3.5",
     "lunr-languages": "^1.0.0",
     "mapbox-gl": "^0.51.0-beta.2",
     "onsenui": "^2.10.5",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^18",
+    "react-dom": "^18",
     "react-onsenui": "^1.11.1"
   },
   "scripts": {

@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import MapContainer from './components/MapContainer.js'
+import MapContainer from './new_components/MapContainer.js'
 
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        hola mundo
-        <MapContainer />
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className="App">
+      <MapContainer />
+    </div>
+  );
 }
 
 export default App;

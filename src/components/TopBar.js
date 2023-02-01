@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
+// import Input from '@material-ui/core/Input';
 import ResultsIcon from './../assets/results-icon.png'
 
 class TopBar extends React.Component {
@@ -24,29 +24,10 @@ class TopBar extends React.Component {
   render () {
     var icon = null
     if(this.state.query.length > 0) icon = <img className="w-4 h-4 m-2 mr-4" src={ResultsIcon} />
-    console.log('bar props', this.props)
     return <div className="absolute pin-t pin-r m-2 mr-16 flex">
       {icon}
       <div className= "w-64">
-        <Input
-        onKeyPress={(ev) => {
-          console.log(`Pressed keyCode ${ev.key}`);
-          if (ev.key === 'Enter') {
-            // Do code here
-            this.props.searchMapData(this.state.query)
-            ev.preventDefault();
-          }
-        }}
-         placeholder="Buscar por texto, autor, o palabra"
-         type="search"
-         fullWidth
-         value={this.state.query}
-         className=""
-         onChange={this.handleChange('query')}
-         inputProps={{
-           'aria-label': 'Description',
-         }}
-       />
+        
       </div>
     </div>
   }

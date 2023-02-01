@@ -18,7 +18,7 @@ class BaseMap extends Component {
         container: this.rootEl,
         style: config.mapbox.style,
         attributionControl: 'false',
-        pitch: 120, // pitch in degrees
+        pitch: 60, // pitch in degrees
       //  bearing: -60, // bearing in degrees
       //  center: [-74.065604, 4.652280],
         center: this.props.center,
@@ -178,7 +178,7 @@ class BaseMap extends Component {
   render() {
     return (
       <div id='map'
-        style={{width: '100%', height: '80%', position: 'fixed', top: '0px', bottom: '0px', left: '0px'}}
+        style={{width: '100%', height: 'calc(100% - 50px)', position: 'fixed', top: '50px', bottom: '0px', left: '0px'}}
         ref={element => this.rootEl = element}
       >
       </div>
