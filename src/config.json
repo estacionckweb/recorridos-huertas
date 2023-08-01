@@ -3,7 +3,7 @@
     "token": "pk.eyJ1Ijoib2oiLCJhIjoiSEw0cDJaNCJ9.9ffK1AU2O26zvS5Zsa6eqw",
     "style-redblack": "mapbox://styles/oj/cjoxdgmnc3w4f2sl68ownr9am",
     "style-vintage": "mapbox://styles/oj/cjoxdj7hfagl12spco8brkshg",
-    "style": "mapbox://styles/mapbox/light-v9"
+    "style": "mapbox://styles/mapbox/dark-v9"
   },
   "airtable": {
     "url":  "https://api.airtable.com/v0/appe2QPJNGquOBgw0/",

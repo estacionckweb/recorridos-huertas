@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+body {
+    background-color: #111;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.marker {
+    width: 50px;
+    height: 83px;
+    background-image: url(../assets/pin.png);
+    background-size: cover;
+}
+
+.marker.selected {
+    width: 50px;
+    height: 83px;
+    background-image: url(../assets/pin_selected.png);
+    z-index: 10;
+}
+
+.marker.icon_01 {
+    background-image: url(../assets/pin-02.png);
+}
+.marker.icon_02 {
+    background-image: url(../assets/pin-03.png);
+}
+
+.marker.icon_01.selected {
+    background-image: url(../assets/pin-02-selected.png);
+}
+.marker.icon_02.selected {
+    background-image: url(../assets/pin-03-selected.png);
+}
+
+.top-bar {
+    position: relative;
+    overflow: hidden;
+    background-color: #000 !important;
+}
+
+.top-bar::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/patron.png');
+    background-size: 250px;
+    opacity: .1;
+}
+
+.dialog_msg {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    background-color: #222;
+    display: flex;
+    padding: 10px;
+}
+
+.dialog_msg.small {
+    width: 400px;
+}
+
+.dialog_msg::before {
+    content: '';
+    background-image: url('../assets/patron.png');
+    position: absolute;
+    background-size: 250px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+}
+
+.dialog_msg .inside {
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    max-height: calc(100% - 40px);
+    max-width: 450px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+.dialog_msg .gallery {
+    overflow: auto;
+    max-width: calc(100% - 450px);
+    min-width: calc(100% - 450px);
+    max-height: calc(100% - 40px);
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+    /* 
+    flex-direction: row;
+    justify-content: center; */
+    /* position: relative;
+     */
+}
+
+.dialog_msg .gallery .image-container {
+    width: 200px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.9);
+    box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+
+.dialog_msg .gallery .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.dialog_msg .gallery .img.md {
+    height: 350px;
+}
+
+.dialog_msg .gallery .img.la {
+    height: 150px;
+}
+
+/* styles for mobile */
+@media all and (max-width: 1500px) {
+    .dialog_msg {
+        padding: 0;
+        display: block;
+    }
+
+    .dialog_msg .inside {
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+    .dialog_msg .gallery {
+        max-width: 100%;
+        max-height: none;
+        height: auto;
+        overflow: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+.dialog_msg .inside .header {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .1);
+    overflow: auto;
+    width: 100%;
+    backdrop-filter: blur(2px);
+}
+
+.dialog_msg .inside .body {
+    width: 100%;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+    overflow: auto;
+    padding: 10px;
+    margin-top: 5px;
+    backdrop-filter: blur(2px);
+    flex-grow: 1;
+}
+
+.dialog_msg .inside .body.filter {
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.dialog_msg .inside .header nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
+}
+
+.dialog_msg .inside .header h3 {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #333;
+}
+
+.dialog_msg .inside .header h3 span {
+    display: block;
+}
+
+.logoTitle {
+    width: 55px;
+    height: 55px;
+    background-image: url(../assets/title.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.logoTitle.desaturate {
+    filter: saturate(0%);
+}
+
+.logoTitle.icon_01 {
+    background-image: url(../assets/title-02.png);
+}
+.logoTitle.icon_02 {
+    background-image: url(../assets/title-03.png);
+}
+
+.bubble {
+    position: relative;
+    background: #e3ffdf;
+    padding: 10px;
+    font-size: 16px;
+    color: #0a2508;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    word-spacing: 6.5pt;
+    line-height: 16pt;
+    font-weight: bold;
+
+    -webkit-box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.8);
+}
+
+.bubble::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -7px;
+    width: 25px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background: #e3ffdf;
+}
+
+.bubble .bubble_header {
+    font-size: 14px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: #5b8356;
+    font-weight: normal;
+    text-transform: lowercase;
+    font-style: italic;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    word-spacing: 2pt;
+    display: flex;
+}
+
+.bubble_header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-style: italic;
+    color: #0a2508;
+    display: flex;
+    align-items: center;
+    background-color: rgba(61,164,55,.4);
+    padding: 5px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.bubble_header h4:hover {
+    background-color: rgba(61,164,55,1);
+    color: #e3ffdf;
+}
+
+.bubble h4 svg {
+    margin-left: 10px;
+}
+
+.moveBoxMap {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    transition: top 1s;
+}
+
+.moveBoxMap.relation {
+    top: calc(-100% + 100px)
+}
+
+.relationBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    background-color: #111;
+    opacity: 1;
+    background-image: linear-gradient(#222 2px, transparent 2px), linear-gradient(90deg, #222 2px, transparent 2px), linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, #333 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.filterBox {
+    position: absolute;
+    left: 420px;
+    top: 40px;
+}
+
+.relationViz {
+    position: absolute;
+    width: calc(100% - 400px);
+    height: 100%;
+    top: 0;
+    left: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.relationViz svg {
+    max-width: 800px;
+}
+
+.image-container img {
+    margin-bottom: -4px;
+    cursor: pointer;
+    transition: all .1s ease;
+    transform: scale(.95);
+    border-radius: 5px;
+    filter: grayscale(100%);
+}
+
+.image-container:hover img {
+    transform: scale(1);
+    filter: grayscale(0%);
+
+}
+
+.expanded-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100001;
+    backdrop-filter: saturate(0%) blur(5px) brightness(20%);
+}
+
+.moveBoxAcerca {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    transition: top 1s;
+    height: 100%;
+    backdrop-filter: saturate(0%) blur(15px) brightness(20%);
+    z-index: 100;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moveBoxAcerca p {
+    font-size: 20px;
+    text-align: center;
+    max-width: 600px;
+}
