@@ -375,7 +375,7 @@ body {
     height: calc(100% - 50px);
     transition: top 1s;
     height: 100%;
-    backdrop-filter: saturate(0%) blur(15px) brightness(20%);
+    backdrop-filter: saturate(0%) blur(10px) brightness(50%);
     z-index: 100;
     color: white;
     display: flex;
@@ -383,8 +383,31 @@ body {
     justify-content: center;
 }
 
+.moveBoxAcerca::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-image: url(../assets/patron.png);
+    opacity: .05;
+}
+
 .moveBoxAcerca p {
     font-size: 20px;
     text-align: center;
     max-width: 600px;
+}
+
+.top-bar__button:hover {
+    background-color: #333 !important;
+}
+
+.top-bar__button.active:hover {
+    background-color: #90c20d !important;
+}
+
+.top-bar__button:focus {
+    outline: none !important;
 }

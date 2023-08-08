@@ -12,6 +12,7 @@ import { csv } from 'd3'
 
 import DescripcionHuerta from './DescripcionHuerta';
 import RelationsHuertas from './RelationsHuertas';
+import Description from './Description';
 
 const useStyles = makeStyles((theme) => ({
     open: { width: '100%', height: '100%', position: 'absolute', top: '0px', bottom: '0px', left: '0px', transition: 'all 0.5s ease' },
@@ -133,7 +134,7 @@ const MapContainer = props => {
     const [geoJson, setGeoJson] = useState(null)
     const [loaded, setLoaded] = useState(false)
     const [selectedPoint, setSelectedPoint] = useState(null)
-    const [view, setView] = useState("map")
+    const [view, setView] = useState("acerca")
     const [filters, setFilters] = useState({})
     const [activeFilters, setActiveFilters] = useState(false)
 
@@ -302,7 +303,7 @@ const MapContainer = props => {
                     <Box
                         className={`moveBoxAcerca`}
                     >
-                        <p>El proyecto Plataforma Bogotá, en colaboración con el laboratorio HUERTAS - REDES Y ARQUITECTURAS, abre un llamado público para proyectos de huertas urbanas que combinen saberes ancestrales y tecnologías digitales. El objetivo es fomentar la reflexión sobre la relación entre ciudadanos y medio ambiente y establecer soluciones urbanas alrededor de temas como la agricultura urbana, el trabajo comunitario y la soberanía alimentaria. El laboratorio se divide en tres fases: huertas urbanas, redes de información y sistematización e intercambio, y la creación de una plataforma digital colaborativa para el seguimiento y visualización en tiempo real de los proyectos. Además, se creará un bio-espacio de experimentación e investigación dentro de las instalaciones del Planetario de Bogotá en articulación con Plataforma Bogotá.</p>
+                        <Description />
                     </Box>
                 }
 
